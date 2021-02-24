@@ -26,7 +26,7 @@ interface State {
 	search: string;
 }
 
-class MDBIconPicker extends PureComponent<Props, State> {
+export class MDBIconPicker extends PureComponent<Props, State> {
 	private icons = {...fab, ...fas};
 
 	constructor(props: Props) {
@@ -108,5 +108,3 @@ class MDBIconPicker extends PureComponent<Props, State> {
 		)
 	}
 }
-
-export default MDBIconPicker;
