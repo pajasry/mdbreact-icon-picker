@@ -1,4 +1,4 @@
-import {ChangeEvent, FormEvent, PureComponent} from "react";
+import {PureComponent} from "react";
 
 import {library} from "@fortawesome/fontawesome-svg-core";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -8,10 +8,6 @@ import {fas} from "@fortawesome/free-solid-svg-icons";
 import {
 	MDBBtn,
 	MDBCol,
-	MDBDropdown,
-	MDBDropdownItem,
-	MDBDropdownMenu,
-	MDBDropdownToggle,
 	MDBIcon,
 	MDBInput, MDBPopover, MDBPopoverBody, MDBPopoverHeader, MDBRow
 } from "mdbreact";
@@ -20,17 +16,17 @@ import {IconDefinition} from "@fortawesome/fontawesome-svg-core";
 library.add(fab, fas)
 
 interface Props {
-	onChange: (icon: any) => void
-	icon: IconDefinition | null
-};
+	onChange: (icon: any) => void;
+	icon: IconDefinition | null;
+}
 
 interface State {
-	isOpen: boolean
-	pickedIcon: IconDefinition
+	isOpen: boolean;
+	pickedIcon: IconDefinition;
 	search: string;
-};
+}
 
-class MdbReactIconPicker extends PureComponent<Props, State> {
+class MDBIconPicker extends PureComponent<Props, State> {
 	private icons = {...fab, ...fas};
 
 	constructor(props: Props) {
@@ -48,7 +44,7 @@ class MdbReactIconPicker extends PureComponent<Props, State> {
 	}
 
 	toggle = () => {
-		this.setState(prevState => ({
+		this.setState((prevState:State) => ({
 			isOpen: !prevState.isOpen
 		}));
 	}
@@ -113,4 +109,4 @@ class MdbReactIconPicker extends PureComponent<Props, State> {
 	}
 }
 
-export default MdbReactIconPicker;
+export default MDBIconPicker;

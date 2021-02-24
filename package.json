@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "mdbreact-icon-picker",
   "version": "0.1.0",
   "private": true,
   "main": "/dist/mdbreact-icon-picker.min.js",
