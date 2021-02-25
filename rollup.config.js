@@ -4,7 +4,7 @@ import typescript from '@rollup/plugin-typescript';
 import babel from 'rollup-plugin-babel'
 
 const config = {
-	input: 'src/MDBIconPicker.tsx',
+	input: 'src/index.tsx',
 	external: ['react'],
 	output: {
 		format: 'umd',
