@@ -1,4 +1,4 @@
-import React,{PureComponent} from "react";
+import React, {Component} from "react";
 
 import {library} from "@fortawesome/fontawesome-svg-core";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -26,7 +26,7 @@ interface State {
 	search: string;
 }
 
-export class MDBIconPicker extends PureComponent<Props, State> {
+export class MDBIconPicker extends Component<Props, State> {
 	private icons = {...fab, ...fas};
 
 	constructor(props: Props) {
@@ -85,8 +85,8 @@ export class MDBIconPicker extends PureComponent<Props, State> {
 					clickable
 					className="py-0 my-0"
 				>
-					<MDBBtn color='primary' outline>
-						<FontAwesomeIcon icon={[this.state.pickedIcon.prefix, this.state.pickedIcon.iconName]} size="2x"/>
+					<MDBBtn color='primary' outline className="m-0 p-0">
+						<FontAwesomeIcon icon={[this.state.pickedIcon.prefix, this.state.pickedIcon.iconName]}/>
 					</MDBBtn>
 					<div>
 						<MDBPopoverHeader>
